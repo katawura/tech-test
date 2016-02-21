@@ -1,0 +1,38 @@
+
+<form id="bulk_create" action="" onsubmit="false">
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        <% @people.each do |person| %>
+            <tr >
+                <td><input class="firstname" data-id="<%= person.id %>" type="text" value="<%= person.firstname %>" /></td>
+                <td><input class="surname" type="text" value="<%= person.surname %>" /></td>
+            </tr>
+        <% end %>
+    </table>
+    <input type="submit" id="submit" value="OK" />
+</form>
+
+
+<script type="text/javascript">
+    $("#bulk_create").submit(function(e){
+    e.preventDefault();
+    var name_pairs = [];
+    var table_rows = $("table tbody > tr").not(':first');
+    $.each(table_rows, function( index, value ) {
+      var firstname = $(value).find("td input.firstname").val();
+      var id = $(value).find("td input.firstname").data("id");
+      var surname = $(value).find("td input.surname").val();
+      name_pairs.push({firstname:firstname, surname:surname, id:id});
+    });
+    console.log(name_pairs);
+    $.post("/people.json", {data:name_pairs}).done(function( data ) {
+    alert( "successflly update" );
+  }).fail(function() {
+    alert( "error" );
+  });
+});
+
+</script>

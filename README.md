@@ -1,14 +1,23 @@
 ## Any instructions required to run your solution and tests in a Linux environment.
 
 Install Ruby
+
 Install Rails
+
 Install homebrew
+
 Install rbenv via homebrew
+
 Navigate to the solution root using the command line
+
 Run bundle install
+
 Run the seed data using rake db:setup
+
 Run rake db:migrate
+
 Finally run rails s
+
 Open the up in your broswer on the default port 3000 (http://localhost:3000)
 
 ## A covering note explaining the technology choices you have made.

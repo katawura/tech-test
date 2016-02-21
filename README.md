@@ -22,7 +22,7 @@ Open the up in your broswer on the default port 3000 (http://localhost:3000)
 
 ## A covering note explaining the technology choices you have made.
 
-My app is mainly built using Ruby on the Rails framework. Both the language and the framework encapsulated security, performance, readability, testability, scalability, simplicity. Also made it easier to implement my MVC logic.
+My app is mainly built using Ruby on the Rails framework. Both the language and the framework encapsulated security, performance, readability, testability, scalability, simplicity. Also made it easier to implement my MVC logic. Finally, Rails emphasizes the use of well-known software engineering patterns and paradigms, including convention over configuration (CoC), don't repeat yourself (DRY), and the active record pattern.
 
 Wrote client code that send pre-designed objects as a POST request
 
